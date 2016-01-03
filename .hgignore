@@ -1,0 +1,27 @@
+# use glob syntax.
+syntax: glob
+
+*.py[cod]
+*~
+*.orig
+*.db
+*.log
+.idea
+venv
+logs
+reports
+static
+.tmp
+bower_components
+node_modules
+dist
+.sass-cache
+.DS_Store
+app/fonts
+node_modules/
+platforms/
+plugins/
+www/lib/
+app/config.json
+app/styles/less/*.css
+app/styles/less/mixins/*.css

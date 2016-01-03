@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+  <title>eImageCropper Test Page</title>
+  <link rel="stylesheet" href="../bower_components/ng-img-crop/compile/minified/ng-img-crop.css"/>
+</head>
+
+<body ng-controller="Ctrl">
+<!--
+    Wrapper for imgCrop
+    All settings for imgCrop set by override templateUrl
+    params:
+      template-url - path to template for cropper
+      result-image - optional. scope var of result cropping
+      type-cropper - optional. square, circle, rectangle, Default: square
+      crop-size - optional. Width/height of the result image (in pixels). Default: 200. 'selection' renders an image of the size of the area selected. 'max' maximizes the rendered image.
+-->
+<e-image-cropper template-url="crop.html" result-image="result" type-cropper="rectangle" crop-size="[{w:100,h:150},{w:400,h:300}]"></e-image-cropper>
+
+<script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="../bower_components/ng-img-crop/compile/unminified/ng-img-crop.js"></script>
+<script type="text/javascript" src="../source/eventer-image-cropper.js"></script>
+<script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>

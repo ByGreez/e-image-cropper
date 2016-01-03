@@ -1,0 +1,29 @@
+{
+  "name": "e-image-cropper",
+  "authors": [
+    "Val Grom <bygreez@gmail.com>"
+  ],
+  "description": "Wrapper for img-crop directive AngularJS, Eventer.",
+  "main": "compile/minified/eventer-image-cropper.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "images",
+    "crop"
+  ],
+  "dependencies": {
+    "angular": "^1.3.0",
+    "ng-img-crop": "https://github.com/ByGreez/ngImgCrop.git#0.4.7a"
+  },
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

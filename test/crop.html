@@ -1,0 +1,50 @@
+<style>
+  .cropArea {
+    background: #E4E4E4;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .cropArea.medium {
+    width: 500px;
+    height: 350px;
+  }
+</style>
+<form>
+  <label for="fileInputImage">Select Image:</label>
+  <input type="file" id="fileInputImage" accept="image/*"/>
+  <button type="reset">Clear</button>
+  <button ng-click="data_image='test.jpg'">Set Test Image</button>
+</form>
+
+<div>
+  <label>Image URL:
+    <input type="text" ng-model="edit_image_uri"/>
+  </label>
+  <button ng-click="result_data_image=edit_image_uri">Set Image</button>
+</div>
+<div>
+  <button ng-click="result_data_image=''">Reset Image</button>
+</div>
+
+<div ng-if="data_image" class="cropArea medium">
+
+  <img-crop
+      image="data_image"
+      result-image="$parent.result_data_image"
+      url-blob="$parent.url_blob"
+      area-type="{{type_cropper}}"
+      result-image-size="crop_size"
+      chargement="'Loading'">
+  </img-crop>
+</div>
+<div style="text-align:center" ng-if="result_data_image">
+  <h3>Result with uri</h3>
+  <div>
+    <img ng-src="{{result_data_image}}"/>
+  </div>
+  <h3>Result with blob in url</h3>
+  <div>
+    <img ng-src="{{url_blob}}"/>
+  </div>
+</div>
